@@ -2,7 +2,7 @@ import Koa from 'koa'
 import KoaRouter from 'koa-router'
 import fetch from 'node-fetch'
 
-import config from './config'
+import { config } from './config'
 
 
 const bikeStationsUrl = apiKey =>
