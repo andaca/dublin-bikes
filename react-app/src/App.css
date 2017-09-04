@@ -1,24 +1,65 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  --primary-medium:#00E676;
+  --primary-light: #66FFA6;
+  --primary-dark: #00B248;
+  
+  --secondary-medium: #FFEA00; 
+
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar {
+  background: var(--primary-medium);
+  width: calc(100% - 20px);    /* minus padding */
+  height: 28px;
+  padding: 10px;
+  display: inline-block;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
+}
+
+.menu-text {
+  padding-top: 5px;
+  font-size: 14pt;
+  font-weight: bolder;
+  color: black;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.menu-icon-container {
+  width: 198px;
+  height: 100%;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.menu-icon {
+  height: 25px;
+  width: 25px;
+  margin: auto;
+  padding: 0 15px;
 }
 
-.App-intro {
-  font-size: large;
+#map{
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Dont hide the shadow of the menu bar*/
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.location-button {
+  height: 20px;
+  width: 20px;
+  z-index: 10;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--secondary-medium);
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 
+    0 3px 6px rgba(0,0,0,0.16), 
+    0 3px 6px rgba(0,0,0,0.23)
+  ;
 }
